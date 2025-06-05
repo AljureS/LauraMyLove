@@ -1,0 +1,108 @@
+/* Reseteo mínimo */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3.2rem;
+  color: #000000ad;
+  text-align: center;
+}
+button {
+  font-family: "Great Vibes", cursive;
+  font-size: 1.5rem;
+}
+img {
+  padding-top: 3rem;
+  width: 32vw; /* Ajusta el tamaño de la imagen del gato */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-bottom: -10px;
+}
+
+/* Contenedor principal ocupa toda la pantalla y centra su contenido */
+.main-container {
+  position: relative; /* Importante para que los hijos con absolute se posicione relativo a aquí */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #bf77d4; /* Puedes cambiar a cualquier color de fondo */
+}
+
+/* Estilo del título */
+.main-container h1 {
+  font-size: 3.2rem;
+  z-index: 1;
+  height: 2%;
+}
+
+/* Wrapper de los botones */
+.buttons-wrapper {
+  position: relative; /* Para que el botón “No” posicionado absolute se limite aquí */
+  display: flex; /* Al inicio, “Sí” y “No” estarán alineados uno a lado del otro */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100vw;
+  height: 40vh;
+}
+
+/* Estilos generales de ambos botones */
+button {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Estilo extra específico del botón “No” */
+#no-button button {
+  background-color: #ffdddd;
+  border-color: #cc4444;
+}
+
+/* Contenedor cuando se acepta (versión placeholder) */
+.accepted-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #a785a2;
+}
+
+.accepted-container h1 {
+  font-size: 2.5rem;
+  color: #000000;
+  /* margin-bottom: 1rem; */
+}
+
+.accepted-container p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  img {
+    padding-top: 3rem;
+    width: 95vw; /* Ajusta el tamaño de la imagen del gato */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: -10px;
+  }
+}
